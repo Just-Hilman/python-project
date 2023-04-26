@@ -20,3 +20,7 @@ sent_email_records = []
 driver = webdriver.Chrome()
 driver.maximize_window()
 
+# Loop through each gmail account
+for x in range(len(email_id)):
+    email_ids = email_id[x]
+    passwords = password[x]

@@ -24,3 +24,5 @@ driver.maximize_window()
 for x in range(len(email_id)):
     email_ids = email_id[x]
     passwords = password[x]
+
+    sent_email_records.extend(sent_email)

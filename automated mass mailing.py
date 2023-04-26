@@ -14,3 +14,9 @@ to_email = list(email_data["recipient_email"])
 
 # Count of sent email
 sent_email = []
+sent_email_records = []
+
+# Launch chrome browser
+driver = webdriver.Chrome()
+driver.maximize_window()
+

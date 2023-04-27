@@ -26,3 +26,16 @@ for x in range(len(email_id)):
     passwords = password[x]
 
     sent_email_records.extend(sent_email)
+    sent_email.clear()
+
+    # Navigate to Gmail website
+    driver.get('https://www.gmail.com')
+    time.sleep(10)
+
+    # Delete all cookies
+    driver.delete_all_cookies
+
+    # Refresh webpage to clear any cached data
+    driver.refresh()
+    time.sleep(10)
+    

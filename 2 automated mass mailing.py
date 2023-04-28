@@ -39,3 +39,6 @@ for x in range(len(email_id)):
     driver.refresh()
     time.sleep(10)
     
+    # Enter email id and click next
+    driver.find_element(By.XPATH, '//input[@id="identifierId"]').send_keys(email_id)
+    driver.find_element(By.XPATH, '//span[contains(text(), "Next")]').click()

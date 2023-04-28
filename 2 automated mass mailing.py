@@ -48,3 +48,15 @@ for x in range(len(email_id)):
     driver.find_element(By.XPATH, '//input[@id="password"]').send_keys(passwords)
     driver.find_element(By.XPATH, '//span[contains(text(), "Next")]').click()
     time.sleep(10)
+
+    # Loop through recipient email_id
+    for i in range(len(to_email)):
+        # Get the current chunk of 5 elements
+        to = to_email[i]
+        if to not in sent_email_records:
+            # Compose email
+            driver.find_element(By.XPATH, '//div[@class="T-I T-I L3"]').click()
+            time.sleep(10)
+
+            # Enter recipients, subject, and body of email
+            driver.find_element(By.XPATH, '//input[@class="agP aFw"]').send_keys(to)

@@ -40,5 +40,11 @@ for x in range(len(email_id)):
     time.sleep(10)
     
     # Enter email id and click next
-    driver.find_element(By.XPATH, '//input[@id="identifierId"]').send_keys(email_id)
+    driver.find_element(By.XPATH, '//input[@id="identifierId"]').send_keys(email_ids)
     driver.find_element(By.XPATH, '//span[contains(text(), "Next")]').click()
+    time.sleep(10)
+
+    # Enter password and click next
+    driver.find_element(By.XPATH, '//input[@id="password"]').send_keys(passwords)
+    driver.find_element(By.XPATH, '//span[contains(text(), "Next")]').click()
+    time.sleep(10)

@@ -60,3 +60,14 @@ for x in range(len(email_id)):
 
             # Enter recipients, subject, and body of email
             driver.find_element(By.XPATH, '//input[@class="agP aFw"]').send_keys(to)
+            time.sleep(10)
+            driver.find_element(By.XPATH, '//input[@name="subjectbox"]').send_keys("Subject of the email")
+            time.sleep(10)
+            driver.find_element(By.XPATH, '//div[@aria-label="Message Body"]').send_keys("Body of the email")
+
+            # Send the email
+            driver.find_element(By.XPATH, '//div[@class="T-I J-35-Ji aoO v7 T-I-atl L3"]').click()
+            time.sleep(10)
+
+            print("Email sent to : ", to)
+            sent_email.append(to)

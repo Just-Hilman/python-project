@@ -71,3 +71,13 @@ for x in range(len(email_id)):
 
             print("Email sent to : ", to)
             sent_email.append(to)
+
+            if len(sent_email) >= 2:
+                print("Logging of Current Email")
+                break
+            else:
+                continue
+
+    # Logging out of Gmail
+    driver.get("https://accounts.google.com/Logout?hl=en")
+    time.sleep(10)

@@ -5,7 +5,7 @@ import smtplib
 email_sender = ""
 email_password = ""
 
-email_receiver = ""
+email_receiver = "hpanser@gmail.com"
 
 subject = "Test"
 body = "" "Test body email" ""

@@ -20,3 +20,9 @@ print("B. Substraction")
 print("C. Multiplication")
 print("D. Divission")
 print("E. Exit")
+
+choice = input("Input your choice: ")
+if choice == "A" or choice =="a":
+    print("Addition")
+    a = int(input("Input the first number: "))
+    b = int(input("Input the second number: "))

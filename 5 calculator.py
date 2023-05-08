@@ -14,3 +14,9 @@ def mul(a, b):
 def div(a, b):
     answer = a / b
     print(str(a) + "/" + str(b) + "=" + str(answer))
+
+print("A. Addition")
+print("B. Substraction")
+print("C. Multiplication")
+print("D. Divission")
+print("E. Exit")

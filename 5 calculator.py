@@ -28,7 +28,17 @@ if choice == "A" or choice =="a":
     b = int(input("Input the second number: "))
     add(a, b)
 elif choice == "B" or choice =="b":
-    print("Addition")
+    print("Substraction")
     a = int(input("Input the first number: "))
     b = int(input("Input the second number: "))
     sub(a, b)
+elif choice == "C" or choice =="c":
+    print("Multiplication")
+    a = int(input("Input the first number: "))
+    b = int(input("Input the second number: "))
+    mul(a, b)
+elif choice == "D" or choice =="d":
+    print("Divission")
+    a = int(input("Input the first number: "))
+    b = int(input("Input the second number: "))
+    div(a, b)

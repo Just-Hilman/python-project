@@ -26,3 +26,9 @@ if choice == "A" or choice =="a":
     print("Addition")
     a = int(input("Input the first number: "))
     b = int(input("Input the second number: "))
+    add(a, b)
+elif choice == "B" or choice =="b":
+    print("Addition")
+    a = int(input("Input the first number: "))
+    b = int(input("Input the second number: "))
+    sub(a, b)

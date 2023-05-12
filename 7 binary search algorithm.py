@@ -3,3 +3,6 @@ def binary_search(list, element):
     start = 0
     end = len(list)
     steps = 0
+
+    while (start <= end):
+        print("Step", steps, ":", list[start:end+1])

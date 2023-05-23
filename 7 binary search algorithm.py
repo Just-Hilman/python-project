@@ -14,3 +14,11 @@ def binary_search(list, element):
             return middle
         elif element < list[middle]:
             end = middle -1
+        else:
+            start = middle +1
+    return -1
+
+my_list = [1,2,3,4,5,6,7,8,9]
+target = 2
+
+binary_search(my_list, target)

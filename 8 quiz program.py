@@ -26,5 +26,9 @@ quiz = {
     "question7": {
         "question": "What is the capital of Austria?",
         "answer": "Vienna"
-    },
+    }
 }
+
+score = 0
+for key, value in quiz.items():
+    

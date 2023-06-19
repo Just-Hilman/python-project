@@ -12,3 +12,9 @@ while exit == False:
     if user_input == "exit":
         print("Game Ended")
         exit = True
+
+    if user_input == "rock":
+        if computer_input == "rock":
+            print("Your input is a rock")
+            print("Computer input is a rock")
+            print("It is a tie")

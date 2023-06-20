@@ -18,3 +18,13 @@ while exit == False:
             print("Your input is a rock")
             print("Computer input is a rock")
             print("It is a tie")
+
+        if computer_input == "paper":
+            print("Your input is a rock")
+            print("Computer input is a paper")
+            print("You lose")
+
+        if computer_input == "scissor":
+            print("Your input is a rock")
+            print("Computer input is a scissor")
+            print("You win")

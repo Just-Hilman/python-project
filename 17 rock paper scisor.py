@@ -19,12 +19,14 @@ while exit == False:
             print("Computer input is a rock")
             print("It is a tie")
 
-        if computer_input == "paper":
+        elif computer_input == "paper":
             print("Your input is a rock")
             print("Computer input is a paper")
             print("You lose")
+            computer_points += 1
 
-        if computer_input == "scissor":
+        elif computer_input == "scissor":
             print("Your input is a rock")
             print("Computer input is a scissor")
             print("You win")
+            user_points += 1

@@ -30,3 +30,21 @@ while exit == False:
             print("Computer input is a scissor")
             print("You win")
             user_points += 1
+
+    elif user_input == "paper":
+        if computer_input == "rock":
+            print("Your input is a paper")
+            print("Computer input is a rock")
+            print("You win")
+            user_points += 1
+
+        elif computer_input == "paper":
+            print("Your input is a paper")
+            print("Computer input is a paper")
+            print("It is a tie")
+
+        elif computer_input == "scissor":
+            print("Your input is a paper")
+            print("Computer input is a scissor")
+            print("You lose")
+            computer_points += 1

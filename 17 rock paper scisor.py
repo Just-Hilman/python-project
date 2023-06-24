@@ -11,6 +11,7 @@ while exit == False:
 
     if user_input == "exit":
         print("Game Ended")
+        print("You won a total score of " + str(user_points) + "And computer total score is " + str(computer_points) )
         exit = True
 
     if user_input == "rock":

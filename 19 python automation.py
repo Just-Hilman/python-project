@@ -2,7 +2,7 @@ import requests
 import schedule
 import time
 
-mobile_number = 085700000000
+mobile_number = 0857123456789
 
 def send_message():
     resp = requests.post('https://textbelt.com/text', {

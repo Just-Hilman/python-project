@@ -1,13 +1,20 @@
 import matplotlib.pyplot as plt
 
-x = [2, 4, 5]
-y = [2, 3, 6]
+x1 = [2, 4, 5]
+y1 = [2, 3, 6]
 
-plt.plot(x, y)
+plt.plot(x1, y1, label = 'Line 1')
+
+x2 = [2, 4, 5]
+y2 = [2, 3, 6]
+
+plt.plot(x2, y2, label = 'Line 2')
 
 plt.xlabel('X Axis')
 plt.ylabel('Y Axis')
 
-plt.title('Demo Graph')
+plt.title('Demo Graph - Two Lines')
+
+plt.legend()
 
 plt.show

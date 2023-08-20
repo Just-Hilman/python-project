@@ -24,6 +24,7 @@ if len(sys.argv) == 2:
         key = input("Enter a key: ")
         data[key] = clipboard.paste()
         save_data(SAVED_DATA, data)
+        print("Data Saved")
     elif command == "load":
         print("load")
     elif command == "list":

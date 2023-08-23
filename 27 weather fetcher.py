@@ -9,6 +9,9 @@ response = requests.get(requests_url)
 
 if response.status_code == 200:
     data = response.json()
-    print(data)
+    weather = data['weather']
+    print(weather)
+    temperature = data['main']['temp']
+    print(temperature)
 else:
     print("An error occured")

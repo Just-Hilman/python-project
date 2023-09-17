@@ -1,4 +1,4 @@
 import random
-import words
+from words import words
 
 print(words)

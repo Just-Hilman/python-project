@@ -15,9 +15,11 @@ class TicTacToe:
 
     def available_moves(self):
         return[i for i, spot in enumerate(self.board) if spot == ' ']
-        # moves = []
-        # for (i, spot) in enumerate(self.board):
-        #     ['x', 'x', 'o'] --> [(0, 'x'), (1, 'x'), (2, 'o')]
-        #     if spot == ' ':
-        #         moves.append(i)
-        # return moves
+
+def play(game, x_player, o_player, print_game=True):
+    if print_game:
+        game.print_board_nums()
+
+    letter = 'X'
+    while game.empty_squares():
+        pass

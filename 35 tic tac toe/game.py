@@ -20,7 +20,7 @@ class TicTacToe:
         return ' ' in self.board
 
     def num_empty_squares(self):
-        return len(self.available_moves())
+        return self.board.count(' ')
 
 def play(game, x_player, o_player, print_game=True):
     if print_game:
@@ -28,4 +28,7 @@ def play(game, x_player, o_player, print_game=True):
 
     letter = 'X'
     while game.empty_squares():
-        pass
+        if letter == '0':
+            square = o_player.get_move(game)
+        else:
+            square = x_player.get_move(game)

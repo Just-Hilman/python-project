@@ -46,4 +46,13 @@ def play(game, x_player, o_player, print_game=True):
                 print(letter + f'make a move to square {square}')
                 game.print_board()
                 print('')
+
+            if game.current_winner:
+                if print_game:
+                    print(letter + ' Wins!')
+                return letter
+            
             letter = 'O' if letter == 'X' else 'X'
+
+        if print_game:
+            print('Its a tie')

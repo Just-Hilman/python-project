@@ -4,9 +4,13 @@ def naive_search(l, target):
             return i
     return -1
 
-def binary_search(l, target):
+def binary_search(l, target, low=None, high=None):
+    if low is None:
+        low = 0
     midpoint = (len(l)) // 2
     if l[midpoint] == target:
         return midpoint
     elif target < l[midpoint]:
-        return binary_search
+        return binary_search(l, target, low, midpoint-1)
+    else:
+        return binary_search(l, target, midpoint+1, high)

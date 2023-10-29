@@ -1,4 +1,5 @@
 import random
+import time
 
 def naive_search(l, target):
     for i in range(len(l)):
@@ -34,8 +35,14 @@ if __name__=='__main__':
         sorted_list.add(random.randint(-3*length, 3*length))
     sorted_list = sorted(list(sorted_list))
 
-    start = start.time()
+    start = time.time()
     for target in sorted_list:
         naive_search(sorted, target)
     end = time.time()
     print("Naive search time: ", (end - start)/length, "seconds")
+
+    start = time.time()
+    for target in sorted_list:
+        binary_search(sorted, target)
+    end = time.time()
+    print("Binary search time: ", (end - start)/length, "seconds")

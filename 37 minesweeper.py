@@ -3,5 +3,12 @@ class Board:
         self.dim_size = dim_size
         self.num_bombs = num_bombs
 
+        self.board = self.make_new_board()
+
+        self.dug = set()
+
+    def make_new_board(self):
+        board = [[None for _ in range(self.dim_size)] for _ in range(self.dim_size)]
+
 def play(dim_size=10, num_bombs=10):
     pass

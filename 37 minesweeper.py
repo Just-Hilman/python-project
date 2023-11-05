@@ -18,7 +18,10 @@ class Board:
             row = loc // self.dim_size
             col = loc % self.dim_size
 
-            
+            if board[row][col] == '*':
+                continue
+            board[row][col] = '*'
+            bombs_planted +=1
 
 def play(dim_size=10, num_bombs=10):
     pass

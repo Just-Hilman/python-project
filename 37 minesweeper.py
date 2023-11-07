@@ -6,6 +6,7 @@ class Board:
         self.num_bombs = num_bombs
 
         self.board = self.make_new_board()
+        self.assign_values_to_board()
 
         self.dug = set()
 
@@ -22,6 +23,13 @@ class Board:
                 continue
             board[row][col] = '*'
             bombs_planted +=1
+        return board
+    
+    def assign_values_to_board(self):
+        for r in range(self.dim_size):
+            for c in range(self.dim_size):
+                if self.board[r][c] == '*':
+                    continue
 
 def play(dim_size=10, num_bombs=10):
     pass

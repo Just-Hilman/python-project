@@ -30,6 +30,14 @@ class Board:
             for c in range(self.dim_size):
                 if self.board[r][c] == '*':
                     continue
+                self.board[r][c] = self.get_num_neighboring_bombs(r,c)
+
+    def get_num_neighboring_bombs(self, row, col):
+        num_neighboring_bombs = 0
+        for r in range(row-1, (row+1)+1):
+            for c in range(col-1, (col+1)+1):
+                if r == row and c == col:
+                    continue
 
 def play(dim_size=10, num_bombs=10):
     pass

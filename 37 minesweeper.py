@@ -38,6 +38,9 @@ class Board:
             for c in range(col-1, (col+1)+1):
                 if r == row and c == col:
                     continue
+                if self.board[c][r] == '*':
+                    num_neighboring_bombs += 1
+        return num_neighboring_bombs
 
 def play(dim_size=10, num_bombs=10):
     pass

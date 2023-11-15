@@ -42,5 +42,9 @@ class Board:
                     num_neighboring_bombs += 1
         return num_neighboring_bombs
 
+    def dig(self, row, col):
+        self.dug.add((row, col))
+
 def play(dim_size=10, num_bombs=10):
+    board = Board(dim_size, num_bombs)
     pass

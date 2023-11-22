@@ -65,6 +65,11 @@ class Board:
                 else:
                     visible_board[row][col] = ' '
 
+        string_rep = ''
+        widths = []
+        for idx in range(self.dim_size):
+            columns = map(lambda x: x[idx], visible_board)
+
 def play(dim_size=10, num_bombs=10):
     board = Board(dim_size, num_bombs)
     pass

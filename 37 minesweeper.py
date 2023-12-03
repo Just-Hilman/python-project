@@ -88,3 +88,11 @@ def play(dim_size=10, num_bombs=10):
             continue
 
         safe = board.dig(row, col)
+        if not safe:
+            break
+
+    if safe:
+        print("Congratulation")
+    else:
+        print("Sorry game over")
+        board.dug = [(r,c) for r in range(board.dim_size) for c in range(board.dim_size)]

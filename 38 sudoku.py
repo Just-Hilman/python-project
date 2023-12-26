@@ -20,6 +20,8 @@ def is_valid(puzzle, guess, row, col):
         for c in range(col_start, col_start + 3):
             if puzzle[r][c] == guess:
                 return False
+            
+    return True
 
 def solve_sudoku(puzzle):
     row, col = find_next_empty(puzzle)
@@ -29,3 +31,6 @@ def solve_sudoku(puzzle):
 
     for guess in range(1, 10):
         if is_valid(puzzle, guess, row, col):
+            puzzle[row][col] = guess
+            if solve_sudoku(puzzle):
+                return True

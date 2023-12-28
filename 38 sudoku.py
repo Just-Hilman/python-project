@@ -34,3 +34,11 @@ def solve_sudoku(puzzle):
             puzzle[row][col] = guess
             if solve_sudoku(puzzle):
                 return True
+        
+        puzzle[row][col] = -1
+    return False
+
+if __name__ == "__main__":
+    example_board = [
+        [3, 9, -1, -1, 5, -1, -1, -1, -1]
+    ]

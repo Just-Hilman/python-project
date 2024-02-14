@@ -33,7 +33,7 @@ def check_winnings(columns, lines, bet, values):
             else:
                 winnings += values[symbol] * bet
                 winnings_lines.append(line +1)
-    return winnings
+    return winnings, winnings_lines
 
 def get_slot_machine_spin(rows, cols, symbols):
     all_symbols = []
@@ -116,7 +116,8 @@ def main():
 
     slots = get_slot_machine_spin(ROWS, COLS, symbol_count)
     print_slot_machine(slots)
-    winnings = check_winnings(slots, lines, bet, symbol_value)
+    winnings, winnings_lines = check_winnings(slots, lines, bet, symbol_value)
     print(f"You won ${winnings}")
+    print(f"You won on lines: ", *winnings_lines)
 
 main()

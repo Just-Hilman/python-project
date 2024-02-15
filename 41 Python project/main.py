@@ -102,8 +102,7 @@ def get_bet():
             print("Please enter a number")
     return amount
 
-def main():
-    balance = deposit()
+def spin():
     lines = get_number_of_lines()
     while True:
         bet = get_bet()
@@ -120,4 +119,8 @@ def main():
     print(f"You won ${winnings}")
     print(f"You won on lines: ", *winnings_lines)
 
+
+def main():
+    balance = deposit()
+    
 main()

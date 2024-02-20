@@ -118,9 +118,13 @@ def spin():
     winnings, winnings_lines = check_winnings(slots, lines, bet, symbol_value)
     print(f"You won ${winnings}")
     print(f"You won on lines: ", *winnings_lines)
+    return winnings_lines - total_bet
 
 
 def main():
     balance = deposit()
+    while True:
+        print(f"Current balance is ${balance}")
+        spin = input("Press enter to spin")
     
 main()

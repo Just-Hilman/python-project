@@ -102,7 +102,7 @@ def get_bet():
             print("Please enter a number")
     return amount
 
-def spin():
+def spin(balance):
     lines = get_number_of_lines()
     while True:
         bet = get_bet()
@@ -125,6 +125,10 @@ def main():
     balance = deposit()
     while True:
         print(f"Current balance is ${balance}")
-        spin = input("Press enter to spin")
+        answer = input("Press enter to spin (q to quit)")
+        if answer == "q":
+            break
+        balance += spin()
+    print(f"You left {balance}")
     
 main()
